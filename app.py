@@ -116,7 +116,7 @@ else:
 st.write(' ')
 st.write('Can This Model Be Applied In The Real World?')
 st.write('Applied, Yes! but...')
-st.write('The purpose of this model is to demonstrate the precision and efficiency that deep learning brings to the healthcare field. After training on just a couple thousand images from real-world datasets, this model demonstrates high accuracy and precision when determining if a scan has cancer or not. Having said that, you should never base a diagnosis on what a model says. The real-world purpose is for a physician to use a model such as this as a reference. By eliminating cases where both a doctor and the model is confident the patient does not have cancer, they can focus on cases they believe do have cancer. Doing so could save lives and using CT scans has already proven to be the case!')
+st.write('The purpose of this model is to demonstrate the recall and efficiency that deep learning brings to the healthcare field. After training on just a couple thousand images from real-world datasets, this model demonstrates high accuracy and recall when determining if a scan has cancer or not. Having said that, you should never base a diagnosis on what a model says. The real-world purpose is for a physician to use a model such as this as a reference. By eliminating cases where both a doctor and the model is confident the patient does not have cancer, they can focus on cases they believe do have cancer. Doing so could save lives and using CT scans has already proven to be the case!')
     
     
 # disclaimer 
