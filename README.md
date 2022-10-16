@@ -2,10 +2,12 @@
 ### Michael Capparelli
 
 ## Problem Statement:
+
 Accurately classify chest computed tomography scans containing various forms of lung cancer such as Adenocarcinoma, Large Cell Carcinoma, Squamous Cell Carcinoma, and other malignant cases. This is a binary problem that uses deep-learning neural nets to determine whether a CT scan contains cancer or not.
 
 
 ## Background:
+
 The American Cancer Society’s estimates for lung cancer in the United States for 2022 are:
 - About 236,740 new cases of lung cancer (117,910 in men and 118,830 in women)
 - About 130,180 deaths from lung cancer (68,820 in men and 61,360 in women)
@@ -33,7 +35,7 @@ Several thousand images were aggregated from the following:
 
 ## Executive Summary
 
-Healthcare is a demanding field where effeciency and timely response is can be the difference between life and death. For this project, I aggregated, cleaned, and labeled 2480 images of chest CT scans. This is a binary problem where the scan either contains cancer or doesn't. Splitting each class in my training, validation and testing sets equally, a baseline of 50% is established. Constructing convolutional neural networks while optimizing for high accuracy, recall and minimizing false negatives is the goal. This is because it would be better to tell a patient they have cancer when they do not compared to telling someone they do not have cancer when they do. After constructing several custom models and implementing transfer learning models with my own regularization methods, I gather the following results.
+Healthcare is a demanding field where efficiency and timely response can be the difference between life and death. For this project, I aggregated, cleaned, and labeled 2480 images of chest CT scans. This is a binary problem where the scan either contains cancer or doesn't. Splitting each class in my training, validation, and testing sets equally, a baseline of 50% is established. Constructing convolutional neural networks while optimizing for high accuracy, recall, and minimizing false negatives is the goal. This is because it would be better to tell a patient they have cancer when they do not opposed to telling someone they do not have cancer when they do. After constructing several custom models and implementing transfer learning models with my regularization methods, I gather the following results.
 
 
 |Model|Accuracy|Cancer Recall|Non-Cancer Recall|
@@ -43,9 +45,9 @@ Healthcare is a demanding field where effeciency and timely response is can be t
 |VGG16|99%|97%|100%|
 |MobileNetV2|94%|88%|100%|
 
-Since all images are axial slices of a chest CT scan, the ResNet50 model is most ideal to use not only due to outperforming the baseline by 47% but because ResNet50 operates better with grayscale images than the other models. Additionally the one image whcih was misclassified as a false negative was misclassified in all models which led me to believe there was an error in pre-processing with this specific image.
+Since all images are axial slices of a chest CT scan, the ResNet50 model is ideal to use not only due to outperforming the baseline by 47% but because ResNet50 operates better with grayscale images than the other models. Additionally, the one image which was misclassified as a false negative was misclassified in all models which led me to believe there was an error in pre-processing with this specific image.
 
-The purpose of this model is to demonstrate the precision and efficiency that deep learning brings to the healthcare field. You should never base a diagnosis on what a model says. The real-world purpose is for a physician to use a model such as this as a reference. By eliminating cases where both a doctor and the model is confident the patient does not have cancer, they can focus on cases they believe do have cancer. Doing so could save lives and using CT scans has already proven to be the case!
+The purpose of this model is to demonstrate the precision and efficiency that deep learning brings to the healthcare field. You should never base a diagnosis on what a model says. The real-world purpose is for a physician to use a model such as this as a reference. By eliminating cases where both a doctor and the model are confident the patient does not have cancer, they can focus on cases they believe do have cancer. Doing so could save lives and using CT scans has already proven to be the case!
 
 ## Data Dictionary
 
